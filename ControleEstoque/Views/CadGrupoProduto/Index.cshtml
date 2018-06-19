@@ -1,23 +1,25 @@
 ﻿@model List<ControleEstoque.Models.GrupoProdutoModel>
-@{
-    ViewBag.Title = "Cadastro de Grupo de Produtos";
-}
+
+    @{
+        ViewBag.Title = "Cadastro de Grupo de Produtos";
+    }
+
 <link href="~/Content/bootstrap-select.css" rel="stylesheet" />
 <style>
 </style>
-<div id="cadastro">
+<div id="cadastro" class="efeito-entrada">
     <section id="cadastro_cabecalho">
         <h1>@ViewBag.Title</h1>
     </section>
     <section id="cadastro_conteudo">
         <div id="cabecalho_grid" class="row">
-            <div class="col-md-12">
-                <a id="btn_incluir" class="btn btn-success" role="button"><i class="glyphicon glyphicon-plus"></i> Incluir</a>
+            <div class="col-md-12 efeito-entrada">
+                <a id="btn_incluir" class="btn btn-success" role="button"><i class="glyphicon glyphicon-plus"></i>Incluir</a>
                 @Html.DropDownList("ddl_tam_pag", (SelectList)ViewBag.ListaTamPag, new { @class = "selectpicker" })
             </div>
         </div>
         <div class="row">
-            <div class="col-md-12">
+            <div class="col-md-12 efeito-entrada">
                 <table id="grid_cadastro" class="table table-bordered table-striped table-hover">
                     <thead>
                         <tr>
@@ -55,7 +57,7 @@
         </div>
         @if(ViewBag.QuantPaginas >1){
         <div class="row">
-            <div class="col-md-12">
+            <div class="col-md-12 efeito-entrada">
                 <nav>
                     <ul class="pagination">
                         <li class="page-item active"><a class="page-link" href="#">1</a></li>
@@ -111,6 +113,8 @@
             data.__RequestVerificationToken = $('[name=__RequestVerificationToken]').val();
             return data;
         }
+
+               
 
         function abrir_form(dados) {
             $('#id_cadastro').val(dados.Id);

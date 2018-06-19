@@ -1,21 +1,23 @@
 ﻿@model List<ControleEstoque.Models.UsuarioModel>
-@{
-    ViewBag.Title = "Cadastro de Usuários";
-}
+<div class="efeito-entrada">
+    @{
+        ViewBag.Title = "Cadastro de Usuários";
+    }
+</div>
 <style>
     
 </style>
-<div id="cadastro">
+<div id="cadastro" class="efeito-entrada">
     <section id="cadastro_cabecalho">
         <h1>@ViewBag.Title</h1>
     </section>
     <section id="cadastro_conteudo">
-        <div id="cabecalho_grid" class="row">
+        <div id="cabecalho_grid" class="row efeito-entrada">
             <div class="col-md-12">
-                <a id="btn_incluir" class="btn btn-success" role="button"><i class="glyphicon glyphicon-plus"></i> Incluir</a>
+                <a id="btn_incluir" class="btn btn-success" role="button"><i class="glyphicon glyphicon-plus"></i>Incluir</a>
             </div>
         </div>
-        <div class="row">
+        <div class="row efeito-entrada">
             <div class="col-md-12">
                 <table id="grid_cadastro" class="table table-bordered table-striped table-hover">
                     <thead>
